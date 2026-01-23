@@ -15,12 +15,26 @@ class Book{
     }
 
     void displayBook() {
-        System.out.println( bookId + " | " + title + " | " + author + (isIssued ? "Issued" : "Available"));
+        System.out.println( bookId + " | " +  title  + " | " +  author  + " | " + (isIssued ?  "Issued"  :  "Available" ));
     }
 }
 
 class Library{
     ArrayList<Book> books = new ArrayList<>();
+
+    void searchBook() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter title to search book : ");
+        String title = scanner.nextLine();
+        for (Book book : books) {
+            if(book.title.equals(title)) {
+                System.out.println("BOOK FOUND :");
+                book.displayBook();
+                return;
+            }
+        } 
+        System.out.println("Book not found!");
+    }
 
     void addBook(Book book) {
         books.add(book);
@@ -69,7 +83,8 @@ class Main{
         System.out.println("2. View Books :");
         System.out.println("3. Issue Book :");
         System.out.println("4. Return Book :");
-        System.out.println("5. Exit ");
+        System.out.println("5. Search Book :");
+        System.out.println("6. Exit ");
 
         System.out.println("Enter your choice :");
         int choice = scanner.nextInt();
@@ -89,10 +104,12 @@ class Main{
 
                 case 2 :
                     library.viewBooks();
+                    break;
 
                     case 3 :
                         System.out.println("Enter Book ID to issue :");
                         library.issueBook(scanner.nextInt());
+                        break;
 
                         case 4 :
                             System.out.println("Enter Book ID to return :");
@@ -100,9 +117,15 @@ class Main{
                             break;
 
                             case 5 :
-                                System.out.println("Exiting........");
-                                System.exit(0);
+                                System.out.println("Search for Book :");
+                                library.searchBook();
+                                break;
 
+                                case 6 :
+                                    System.out.println("Exiting......");
+                                    System.exit(0);
+                                    break;
+                                    
                                 default :
                                 System.out.println("Invalid Choice try again!");
                                 break;
