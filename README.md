@@ -12,7 +12,8 @@ This project demonstrates **object-oriented programming (OOP) concepts** for beg
 - Issue a book (mark it as issued)
 - Return a book (mark it as available)
 - User-friendly console menu
-- Search Book
+- Search Book (By title)
+- Search Book (By author)
 
 ---
 
