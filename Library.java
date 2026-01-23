@@ -22,6 +22,23 @@ class Book{
 class Library{
     ArrayList<Book> books = new ArrayList<>();
 
+    void searchAuthor() {
+        Scanner scanner = new Scanner (System.in);
+        boolean found = false;
+        System.out.println("Enter author to search book : ");
+        String author = scanner.nextLine();
+        for (Book book : books) {
+            if(book.author.equalsIgnoreCase(author)) {
+                found = true;
+                System.out.println("Book Found : ");
+                book.displayBook();
+            }
+        }
+        if (found == false ) {
+        System.out.println("No book found!");
+    } 
+}
+
     void searchBook() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter title to search book : ");
@@ -83,8 +100,9 @@ class Main{
         System.out.println("2. View Books :");
         System.out.println("3. Issue Book :");
         System.out.println("4. Return Book :");
-        System.out.println("5. Search Book :");
-        System.out.println("6. Exit ");
+        System.out.println("5. Search Book by title :");
+        System.out.println("6. Search Book by Author :");
+        System.out.println("7. Exit ");
 
         System.out.println("Enter your choice :");
         int choice = scanner.nextInt();
@@ -117,15 +135,20 @@ class Main{
                             break;
 
                             case 5 :
-                                System.out.println("Search for Book :");
+                                System.out.println("Enter Title to search Book  :");
                                 library.searchBook();
                                 break;
 
                                 case 6 :
+                                    System.out.println("Enter Author to search Book :");
+                                    library.searchAuthor();
+                                    break;
+
+                                case 7 :
                                     System.out.println("Exiting......");
                                     System.exit(0);
                                     break;
-                                    
+
                                 default :
                                 System.out.println("Invalid Choice try again!");
                                 break;
@@ -137,4 +160,3 @@ class Main{
         
     } }
 }
-
