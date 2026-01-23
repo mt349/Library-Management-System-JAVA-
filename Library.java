@@ -25,7 +25,7 @@ class Library{
     void searchAuthor() {
         Scanner scanner = new Scanner (System.in);
         boolean found = false;
-        System.out.println("Enter author to search book : ");
+        System.out.println("Enter Author to search book : ");
         String author = scanner.nextLine();
         for (Book book : books) {
             if(book.author.equalsIgnoreCase(author)) {
@@ -135,12 +135,10 @@ class Main{
                             break;
 
                             case 5 :
-                                System.out.println("Enter Title to search Book  :");
                                 library.searchBook();
                                 break;
 
                                 case 6 :
-                                    System.out.println("Enter Author to search Book :");
                                     library.searchAuthor();
                                     break;
 
@@ -160,3 +158,4 @@ class Main{
         
     } }
 }
+
