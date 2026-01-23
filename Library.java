@@ -27,7 +27,7 @@ class Library{
         System.out.println("Enter title to search book : ");
         String title = scanner.nextLine();
         for (Book book : books) {
-            if(book.title.equals(title)) {
+            if(book.title.equalsIgnoreCase(title)) {
                 System.out.println("BOOK FOUND :");
                 book.displayBook();
                 return;
@@ -137,3 +137,4 @@ class Main{
         
     } }
 }
+
