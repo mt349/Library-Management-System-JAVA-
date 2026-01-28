@@ -1,80 +1,59 @@
-# Library Management System (Java)
+# 📚 Library Management System (Java)
 
-A **console-based Library Management System** built in Java.  
-This project allows users to manage books in a library by adding, viewing, issuing, returning, and searching books.
+A **console-based Library Management System** built in **Java**, designed as a beginner-friendly project to understand **OOP concepts, collections, file handling, and persistent data storage**.
 
----
-
-## Features
-
-- **Add Book:** Add a new book to the library with ID, title, and author.
-- **View All Books:** Display all books in the library along with their status (Issued/Available).
-- **Issue Book:** Mark a book as issued using its Book ID.
-- **Return Book:** Return a previously issued book using its Book ID.
-- **Search Book by Title:** Search for a book using its title.
-- **View Issued Books:** Display all books that are currently issued.
-- **View Available Books:** Display all books that are available in the library.
-- **Exit:** Close the program.
+This application allows users to manage books in a library and **stores data permanently using file handling**, so information is not lost when the program exits.
 
 ---
 
-## Technologies Used
+## 🚀 Features
 
-- Java (OOP concepts)
-- ArrayList for dynamic book storage
-- Scanner for user input
-- Conditional statements and loops
-
----
-
-## How to Run
-
-1. Clone this repository or download the code.
-2. Open the project in your favorite Java IDE (IntelliJ, Eclipse, VS Code, etc.).
-3. Compile and run `Main.java`.
-4. Follow the on-screen menu to interact with the system.
+- ➕ Add new books  
+- 📖 View all books  
+- ✅ Issue books  
+- 🔄 Return books  
+- 📕 View issued books  
+- 📗 View available books  
+- 🔍 Search books by title  
+- 💾 **Persistent storage using file handling (`books.txt`)**
 
 ---
 
-## Example Usage
+## 🛠️ Technologies Used
 
-----LIBRARY MANAGEMENT SYSTEM----
-
-Add Book
-
-View Book
-
-Issue Book
-
-Return Book
-
-Search Book
-
-View Issued Books
-
-View Available Books
-
-Exit
-Enter your choice:
-
-- Add books by entering Book ID, title, and author.
-- Issue or return books using Book ID.
-- Search books by title.
-- View lists of issued or available books.
+- **Java**
+- **OOP Concepts** (Classes, Objects, Constructors)
+- **Collections** (`ArrayList`)
+- **File Handling**
+  - `FileWriter`
+  - `BufferedWriter`
+  - `Scanner`
+  - `File`
 
 ---
 
-## Author
-
-**Mahnoor Tariq**  
-High School Student | Aspiring Software Engineer  
 
 ---
 
-## Notes
+## 💾 How File Handling Works
 
-- This project is designed for console usage.
-- It demonstrates **OOP concepts**, **ArrayList usage**, **boolean flags**, and **control structures**.
-  
+- All book data is saved in `books.txt`
+- Each book is stored in this format:
+- When the program starts, it **automatically loads data from the file**
+- Any changes (add / issue / return) are **saved instantly**
+
+---
+
+## ▶️ How to Run the Program
+
+1. Make sure **Java (JDK)** is installed
+2. Compile the program:
+ ```bash
+ javac Main.java
+👩‍💻 Author
+
+Mahnoor Tariq
+Beginner Java Developer 🚀
+
 
 
